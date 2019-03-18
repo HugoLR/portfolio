@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -6,9 +10,270 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color:#1D1D1D;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+ul {
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+
+
+/*---------Home styles--------*/
+
+.home-grid-container {
+  height: 100px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* grid-template-rows: 33vh 33vh 33vh; */
+  grid-gap: 1em;
+  grid-auto-rows: minmax(calc(100vh / 3), auto)
+}
+
+.home-grid-item {
+  /* border: 1px solid red; */
+}
+
+.box1 {
+  grid-column: 1/4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box2 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.box3 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.box4 {
+  display: flex;
+  justify-content: center;
+}
+
+.box5 {
+  grid-column: 2/3;
+  text-align: center;
+}
+
+.item-about-circle, .item-project-circle, .item-education-circle {
+  width: 200px;
+  height: 200px;
+  color: #D6D6D6;
+  border-radius: 50%;
+  border: 2px solid #3DF487;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+}
+
+.item--perfil-circle {
+  border: 5px solid #32A25F;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  cursor:pointer;
+}
+
+.btn-image-circle {
+  background: transparent;
+  border: none;
+}
+
+.btn-image-circle:focus {
+  outline:none;
+}
+
+.fa-university,.fa-smile ,.fa-laptop-code {
+  font-size: 45px;
+}
+
+.social-media-home {
+  display: flex;
+  justify-content:center;
+}
+
+.social-media-home > li {
+  margin-right: 40px;
+}
+
+.fa-linkedin,.fa-envelope,.fa-twitter {
+  font-size: 35px;
+  color: #D6D6D6;
+}
+
+.welcome-text,.work-together-text {
+  color:#D6D6D6;
+  font-size: 25px;
+  margin: 10px 0 25px 0;
+}
+
+.link-about-page {
+  text-decoration: none;
+}
+
+/*---------About styles--------*/
+
+.about-container {
+  width: 100%;
+  height: 100vh;
+  background-color: #1D1D1D;
+  display: flex;
+}
+
+.about-box1 {
+  width:25%;
+  border: 1px solid #3DF487;
+  background-color: #1E1E1E;
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-image {
+  border-radius: 50%;
+}
+
+.about-question {
+  color: #D6D6D6;
+  width: 70%;
+  line-height: 30px;
+  text-align: center;
+}
+
+.about-question > span {
+  color: #3DF487;
+}
+
+.about-position {
+  color: #D6D6D6
+}
+
+.about-cv-button {
+  background-color: #1D1D1D;
+  width: 50%;
+  color: #3DF487;
+  border: 1px solid #3DF487;
+  padding: 15px;
+}
+
+.about-box2 {
+  width:75%;
+  background-color: #222222;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  grid-auto-rows: minmax(calc(100vh / 3), auto)
+}
+
+.about-box2-item {
+  border: 1px solid #3DF487;
+}
+
+.about-item-1 {
+  grid-column: 2/4;
+  grid-row: 2/3;
+  z-index: 1;
+  background-color: #1E1E1E;
+  padding: 20px;
+}
+
+.about-item-2 {
+  grid-column: 2/4;
+  grid-row: 6/8;
+  z-index: 2;
+  background-color: #1E1E1E;
+  color:#D6D6D6;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.about-item-3 {
+  grid-column: 3/6;
+  grid-row: 4/7;
+  z-index: 1;
+  background-color: #1E1E1E;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:#D6D6D6;
+}
+
+.about-item-4 {
+  grid-column: 5/8;
+  grid-row: 2/5;
+  z-index: 0;
+  background-color: #1E1E1E;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 20px;
+  color:#D6D6D6;
+}
+
+.about-objective {
+  color:#D6D6D6;
+  line-height: 25px;
+}
+
+.about-objective span {
+  color: #3DF487;
+}
+
+.hobbies-tittle {
+  margin-top: 28px;
+}
+
+.hobbies-nav {
+  margin-top: 18px;
+  line-height: 40px;
+}
+
+.hobbies-nav > ul {
+  list-style: none;
+}
+
+.hobbies-nav > ul li::before {
+  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #3DF487; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+.software-nav > ul li::before {
+  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #3DF487; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+.software-nav {
+  margin-top: 18px;
+  line-height: 40px;
+}
+
+.software-title {
+  margin-top: 28px;
+}
+
+.carousel-container {
+  display: flex;
+  justify-content: flex-end;
+  background-color: #222222;
 }
